@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <script defer src="index.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="error"></div>
+  <div class="container-fluid">
+    <form id="form" class="form" action="" method="get">
+      <div class="row row1">
+        <div class="column left">
+          <label for="first-name">First name *</label><br>
+          <!-- <input class="text-field" type="text" name="first-name" id="first-name" required> -->
+          <input class="text-field" type="text" name="first-name" id="first-name" required onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g, '')">
+        </div>
+        <div class="column">
+          <label for="last-name">Last name *</label><br>
+          <input class="text-field" type="text" name="last-name" id="last-name" required onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g, '')">
+        </div>
+      </div>
+
+      <div class="row row2">
+        <div class="column left">
+          <label for="email">Business Email *</label><br>
+          <input class="text-field" type="text" name="email" id="email" required>
+        </div>
+
+        <!-- Phone codes and Phone number dropdown list -->
+        <div class="column">
+          <label for="phone">Phone *</label><br>
+          <select class="phone-country-code" name="country-code" id="country-code">
+            <option value="New Zealand">+64</option>
+            <option value="Australia">+61</option>
+            <option value="Canada">+1</option>
+            <option value="China">+86</option>
+            <option value="Japan">+81</option>
+            <option value="Singapore">+65</option>
+            <option value="United Kingdom">+44</option>
+            <option value="Russia">+7</option>
+          </select>
+          <input class="phone-text-field" type="tel" name="phone" id="phone" required onkeyup="this.value=this.value.replace(/[^0-9]/g, '')">
+        </div>
+      </div>
+
+      <div class="row row3">
+        <div class="column left">
+          <label for="region">Region *</label><br>
+          <select class="region-list dropdown" name="region" id="region">
+            <option value="north-america">North America</option>
+            <option value="south-america">South America</option>
+            <option value="asia-pacific">Asia Pacific</option>
+            <option value="europe">Europe</option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="erp-system">ERP System *</label><br>
+          <select class="erp-list dropdown" name="erp-system" id="erp-system">
+            <option value="microsoft-dynamics">Microsoft Dynamics</option>
+            <option value="sap">SAP</option>
+            <option value="oracle">Oracle</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row row4">
+        <div class="column left">
+          <label for="company">Company Name *</label><br>
+          <input class="text-field" type="text" name="company" id="company" required>
+        </div>
+        <div class="column">
+          <label for="job-title">Job Title *</label><br>
+          <input class="text-field" type="text" name="job-title" id="job-title" required onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g, '')">
+        </div>
+      </div>
+
+      <div class="feedback container-fluid">
+        <label for="feedback-text">How can we help? *</label><br>
+        <textarea name="feedback-text" id="feedback-text" rows="8" cols="67" required></textarea>
+      </div>
+
+      <div class="submit">
+        <input type="checkbox" name="remember-me" id="remember-me">
+        <label for="remember-me">Remember Me</label><br>
+        <input class="submit-button" type="submit" value="LET'S TALK" id="btn">
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>

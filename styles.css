@@ -1,0 +1,90 @@
+body {
+  background-color: #a1cae2;
+}
+
+label {
+  font-family: 'Nunito Sans', sans-serif;
+  /* Initialising the Columns, without box-sizing the columns wouldn't work */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px 100px 10px 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  width: 330px;
+  padding-left: 100px;
+}
+
+.form {
+  margin: 5% 0;
+}
+
+/* The Main Form Validation Section */
+.text-field, .dropdown {
+  border: 0px;
+  border-radius: 5px;
+  height: 2rem;
+  margin-top: 10px;
+  width: 15rem;
+}
+
+.phone-country-code {
+  border: 0px;
+  border-radius: 5px;
+  height: 2rem;
+  margin-top: 10px;
+  width: 3rem;
+}
+
+.phone-text-field {
+  border: 0px;
+  border-radius: 5px;
+  height: 2rem;
+  margin: 10px;
+  width: 11rem;
+}
+
+/* Feedback / Comment Section */
+.feedback {
+  padding: 20px 100px;
+}
+
+textarea {
+  border: 0px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.submit {
+  padding: 10px 100px;
+}
+
+.submit-button {
+  background-color: darkorange;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 10px;
+  height: 2.5rem;
+  width: 32rem;
+}
+
+.submit-button:hover {
+  background-color: orange;
+}
